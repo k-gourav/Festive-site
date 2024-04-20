@@ -8,6 +8,7 @@
 }
 :root{
     --light-white: #F4ECE9;
+    --light-pink: #FF8AAE;
     --light-orange: #E2A127;
     --light-green: #D1EADC;
     --dark-green: #6EB171;
@@ -15,7 +16,7 @@
     --bold-font: 'Clash Display', sans-serif;
 }
 body{
-    min-height: 100vh;
+    min-height: 400vh;
     font-weight: 500;
 }
 
@@ -63,10 +64,13 @@ input{
     font-size: 1.02rem;
     letter-spacing: 1.4;
     font-weight: 400;
-    color: rgba(154, 154, 154, 0.87);
+    color: #000;
 }
 input:focus{
     outline: none;
+}
+::placeholder{
+    color: rgba(145, 144, 144, 0.93);
 }
 
 /* NAV BAR - LOGIN BUTTON */
@@ -254,9 +258,198 @@ iframe:active{
     width: 55%;
 }
 
+/* Join The Community Marquee */
+.joinSection{
+    min-width: 100%;
+    white-space: nowrap;
+    height: 14vh;
+    background-color: #000;
+    color: var(--light-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 16px;
+    overflow: hidden;
+}
+.joinText{
+    text-decoration: none;
+    color: inherit;
+    font-family: var(--light-font);
+    font-weight: 800;
+    cursor: pointer;
+    font-size: 2rem;
+}
+.marqueeX{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: 11s slide infinite linear;
+}
+@keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
 
+/* News Section */
+.newsSection{
+    background-color: var(--light-white);
+    padding: 6rem 12rem;
+}
+img[alt="banner"]{
+    display: block;
+    border: 4px solid;
+    max-width: 610px;
+}
+.bannerList{
+    position: relative;
+    height: fit-content;
+}
+.newsContainer{
+    display: flex;
+    justify-content: center;
+    gap: 1.4rem;
+}
+.newsHead{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 4px solid;
+}
+.mainHead{
+    font-family: var(--bold-font);
+    font-size: 2.188rem;
+    font-weight: 600;
+    line-height: 1.225;
+}
+.mainBody{
+    font-size: 1rem;
+    line-height: 1.25;
+    font-family: var(--light-font);
+    max-width: 380px;
+}
+img[alt="tilt-arrow"]{
+    transform: rotate(-45deg);
+}
+.newsBody{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.5rem 0;
+}
+.bodyArrow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid;
+}
+.bodyArrow:hover{
+    cursor: pointer;
+}
+.centreHead{
+    font-family: var(--bold-font);
+    font-weight: 600;
+    line-height: 1.225;
+    letter-spacing: 0.01rem;
+    font-size: 1.375rem;
+}
+.centreHead a{
+    text-decoration: none;
+    color: #13120F;
+}
+.date{
+    font-family: var(--light-font);
+    color: #DF6845;
+    font-size: 0.875rem;
+}
+.centreBody{
+    font-size: 0.75rem;
+    font-family: var(--light-font);
+    font-weight: 400;
+    line-height: 1.175;
+}
+.placeCategory{
+    display: flex;
+    gap: 10px;
+}
+.placeCategory p{
+    font-family: var(--light-font);
+    font-size: 0.7rem;
+    border-radius: 3px;
+    border: 1px solid;
+    min-width: 65px;
+    height: 18px;
+    padding: 6px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+}
+.place{
+    background-color: var(--light-green);
+}
+.category{
+    background-color: var(--light-pink);
+}
+#newsUpdate{
+    position: absolute;
+    max-width: 270px;
+    padding: 16px 22px;
+    background-color: #13120F;
+    bottom: 0;
+    letter-spacing: 1.9;
+    cursor: pointer;
+}
+#announceHead a, #announceHead{
+    font-size: 1.12rem;
+    line-height: 1.2;
+    color: var(--light-white);
+    letter-spacing: 2;
+}
+#announceInfo{
+    font-size: 0.625rem;
+    color: var(--light-white);
+    width: 89%;
+}
+#readBtn{
+    width: 45%;
+    margin-top: 2.3rem;
+    align-self: flex-end;
+    font-size: 1.12rem;
+    font-weight: 500;
+}
+.newsInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
 
-
-
-
-
+/* Upcoming Events */
+.upcomingSection{
+    background-color: #13120F;
+    padding: 6rem 0;
+}
+.headUpcome{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding-left: 12rem;
+}
+    
+.headUpcomeText{
+    color: var(--light-white);
+    font-family: var(--bold-font);
+    font-weight: 600;
+    font-size: 2.4rem;
+    letter-spacing: 0.5px;
+}
+.bodyUpcomeText{
+    color: var(--light-white);
+    font-size: 1rem;
+    font-family: var(--light-font);
+    font-weight: 500;
+}
